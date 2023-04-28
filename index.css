@@ -5,9 +5,8 @@
     --background: #FFFFFF;
 }
 
-/*---------
-    Reset
-  ---------*/
+/* Ana Düzen */
+
 
   *,
   * ::before,
@@ -19,46 +18,46 @@
       -webkit-font-smoothing: antialiased;
   }
 
-/*----------------
-    Genel Stiller
-  ----------------*/
+/*- Global Stiller- */
 
 body {
   background-color: var(--background);
 }
 
+
 /*--------------
     Tipografi
   --------------*/
 
-h1,
-h2,
-h3 {
+
+.hero__title,
+.section__title,
+.footer__title {
     color: var(--heading);
     font-family: 'Big Shoulders Display', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
 }
 
-h3,
-footer,
-footer p,
-.inspired-text h2, 
-.inspired-text p {
+.footer__title,
+.footer,
+.footer p,
+.section__text__section__text--inspired .section__title,
+.section__text__section__text--inspired p {
     color: var(--background);
 }
 
-h1 {
+.hero__title {
     font-size: 3.75rem;
     line-height: 3.4375rem;
 }
 
-h2 {
+.section__title {
     font-size: 3.125rem;
     line-height: 2.8125rem;
 }
 
-h2 span::before {
+.section__title span::before {
     content:"\A";
     white-space: pre;
 }
@@ -77,7 +76,7 @@ i {
 }
 
 /*----------
-    Düzen
+    Düzenler
   ----------*/
 
 .section-wrapper {
@@ -90,84 +89,84 @@ i {
     max-width: 100%;
 }
 
-/* hero section */
-.hero-container {
+/* hero Kısımları */
+.hero__container {
     margin: 2rem 1rem 7.5rem 1rem;
 }
 
-.hero-text {
+.hero__text {
     margin-top: 2rem;
 }
 
-/* Section-1 */
-.grid-1 img{
+/* section section--1 */
+.section__grid__section__grid--1 img{
     margin-bottom: 1.5625rem;
 }
 
-.section-1 {
+.section__section--1 {
     margin-bottom: 2rem;
 }
 
-.section-1 .container p{
+.section__section--1 .section__container p{
     margin-top: 1.3125rem;
 }
 
 /* 2. Section */
-.grid-2 img,
-.grid-3 img {
+.section__grid__section__grid--2 img,
+.section__grid__section__grid--3 img {
     margin-bottom: 1rem;
 }
 
-.inspired-text,
-footer {
+.section__text__section__text--inspired,
+.footer {
     background-color: var(--heading);
 }
 
-.inspired-text {  
+.section__text__section__text--inspired {
     margin-bottom: 7.5rem;
     padding: 3rem 1.5rem;
 }
 
-.inspired-text p {
+.section__text__section__text--inspired p {
     margin-top: 1.5rem;
 }
 
-/* altbilgi */
-footer {
+/* Footer */
+.footer {
     font-size: 1rem;
     line-height: 1.625rem;
     padding: 3rem 2rem;
 }
 
-footer p {
+.footer p {
     margin-top: 2.375rem;
     margin-bottom: 2.375rem;
 }
+/*
+    Link/Buton
+  */
 
-/*---------------
-    Link/buton
-  ---------------*/
-.arrow, 
-.link {
+.hero__arrow,
+.hero__link {
     align-items: center;
     display: flex;
     height: 4.5rem;
 }
 
-.arrow {
+.hero__arrow {
     background-color: var(--accent);
     justify-content: center;
     width: 3.5rem;
 }
 
-.link {
+.hero__link {
     background-color: var(--heading);
     justify-content: space-between;
     margin-top: 2rem;
     width: 16.25rem;
 }
 
-.link a {
+.hero__link a {
     color: var(--background);
     font-family: 'Big Shoulders Display', sans-serif;
     font-size: 1.25rem;
@@ -178,53 +177,53 @@ footer p {
     text-transform: uppercase;
 }
 
-.link:hover,
-.link:hover .arrow {
+.hero__link:hover,
+.hero__link:hover .hero__arrow {
     transition: all .3s ease-out;
 }
 
-.link:hover {
+.hero__link:hover {
     background-color: var(--accent);
 }
 
-.link:hover .arrow {
+.hero__link:hover .hero__arrow {
     background-color: var(--heading);
 }
 
-/* sosyalmedya linkleri */
-footer a {
+/* Sosyal Medya Link */
+.footer a {
     color: var(--background);
 }
 
-footer a:hover {
+.footer a:hover {
     color: var(--accent);
 }
 
-/*------------------
-    Tablet ekrani
-  ------------------*/
+/*
+    Tablet Görünümü
+  */
 @media screen and (min-width: 768px) {
-   /* Tipografi Tablet*/
-   h1 {
+   /* Typography Tablet*/
+   .hero__title {
        font-size: 4.375rem;
        line-height: 4.0625rem;
    }
 
-   h2 {
+   .section__title {
     font-size: 3.125rem;
     line-height: 2.8125rem;
     }
 
-   h2 span::before {
+   .section__title span::before {
         display: none;
     }
 
-    .section-1 .container p, 
-    .inspired-text p {
+    .section__section--1 .container p,
+    .section__text__section__text--inspired p {
         margin-top: 1.5rem;
     }
 
-    /* Layout Tablet*/
+        /* Layout Tablet Görünümü*/
     .section-wrapper {
         margin-left: auto;
         margin-right: auto;
@@ -235,93 +234,94 @@ footer a:hover {
         display: flex;
     }
 
-    /* baş Tablet*/
-    header {
+     /* Header Tablet Görünümü*/
+    .hero {
         display: flex;
         margin-bottom: 7.5rem;
     }
 
-    .hero-container {
+    .hero__container {
         margin-bottom: 0;
         margin-left: -3.125rem;
         margin-top: 9.0625rem;
         max-width: 21.1875rem;
     }
 
-    /* Section-1 Tablet*/
-    .section-1 {
+    /* section section--1 Tablet Görünümü*/
+    .section__section--1 {
         margin-bottom: .6875rem;
     }
-    .grid-1 img {
+    .section__grid__section__grid--1 img {
         margin-bottom: 0;
     }
 
-    .grid-1 {
+    .section__grid__section__grid--1 {
         order: 2;
     }
-    
-    .container {
+
+    .section__container {
         margin-right: 4.25rem;
         max-width: 13.9375rem;
     }
 
-    /* Section-2 Tablet */
-    .section-2 {
+    /* section section--2 Tablet Görünümü */
+
+    .section__section--2 {
         margin-bottom: 7.5rem;
     }
 
-    .grid-2 img {
+    .section__grid__section__grid--2 img {
         margin-right: .6875rem;
         width: 24.875rem;
     }
 
-    .grid-3 img{
+    .section__grid__section__grid--3 img{
         margin-bottom: 5px;
     }
 
-    .inspired-text, 
-    .grid-2 img{
+    .section__text__section__text--inspired,
+    .section__grid__section__grid--2 img{
         margin-bottom: 0;
     }
 
-    .inspired-container {
+    .section__container__section__container--inspired {
         width: 17.5rem;
-    } 
+    }
 
-    .inspired-text {
+    .section__text__section__text--inspired {
         padding: 5.25rem 1.8125rem;
     }
-    
-    /* Footer Tablet */
-    .footer-container {
+
+    /* Footer Tablet Görünümü */
+    .footer__container {
         display: flex;
         justify-content: space-between;
     }
 
-    footer p {
+    .footer p {
         font-size: 1rem;
         margin: 0;
         max-width: 17.5625rem;
     }
-    
-    footer {
+
+    .footer {
         padding: 3.5rem 2.4375rem;
     }
 }
 
-/*------------------
-    büyük ekran
-  ------------------*/
+/*
+    Bilgisayar Görünümü
+  */
 
   @media screen and (min-width: 1200px){
 
-    /* tipografi büyük ekran */
-    h1 {
+    /* Typography Bilgisayar Görünümü */
+    .hero__title {
         font-size: 6rem;
         line-height: 5.5rem;
     }
 
-    h2 {
+    .section__title {
         font-size:3.75rem;
         line-height: 3.75rem;
     }
@@ -331,74 +331,74 @@ footer a:hover {
         line-height: 2rem;
     }
 
-    /* büyük ekran düzen*/
+    /* Layout Bilgisayar Görünümü*/
     .section-wrapper {
         max-width: 69.375rem;
     }
 
-    /* baş büyük ekran*/
-    header {
+    /* Header Bilgisayar Görünümü*/
+    .hero {
         position: relative;
     }
-    .hero-img {
+    .hero__img {
         padding-left: 28.125rem;
         background-color: var(--heading);
         height: 50rem;
     }
-    
-    .hero-container {
+
+    .hero__container {
         display: flex;
         justify-content: space-between;
         margin-left: 11.5%;
         margin-top: 11.8125rem;
         max-width: 69.375rem;
-        position: absolute; 
+        position: absolute;
     }
 
-    .hero-container h1 {
+    .hero__container .hero__title {
         color: var(--background);
         margin-right: 246px;
         mix-blend-mode: difference;
         width: 514px;
     }
 
-    .hero-text {
+    .hero__text {
         margin-top: 0;
         max-width: 350px;
-    } 
- 
-    /* Section-1 büyük ekran */
-    .section-1,
-    .grid-3 img {
+    }
+
+    /*Bilgisayar Görünümü */
+    .section__section--1,
+    .section__grid__section__grid--3 img {
         margin-bottom: 1.875rem;
     }
 
-    .container {
+    .section__container {
         margin-right: 7.8125rem;
         max-width: 21.875rem;
     }
 
-    /* Section-2 büyük ekran */
-    .grid-2 img {
+    /*Bilgisayar Görünümü */
+    .section__grid__section__grid--2 img {
         margin-right: 1.875rem;
         width: 39.6875rem;
     }
 
-    .inspired-container {
+    .section__container__section__container--inspired {
         width: 27.8125rem;
     }
 
-    .inspired-text {
+    .section__text__section__text--inspired {
         padding: 4.0625rem 3rem;
     }
 
-    /* Footer büyük ekran */
-    footer p {
+      /* Footer Bilgisayar Görünümü */
+      .footer p {
         font-size: 1.125rem;
         max-width: 26.875rem;
     }
-   
-    footer {
+
+    .footer {
         padding: 5rem 10.3125rem;
     }
   }
